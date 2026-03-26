@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Detection - Webcam</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            width: 420px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .instructions {
+            font-size: 13px;
+            color: #ddd;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        video {
+            border-radius: 12px;
+            border: 2px solid rgba(255,255,255,0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        button:disabled {
+            background: #888;
+            cursor: not-allowed;
+        }
+
+        canvas {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>🎭 Emotion Detection</h2>
+
+    <div class="instructions">
+        • Face the camera directly <br>
+        • Ensure good lighting <br>
+        • Keep a natural expression
+    </div>
+
+    <video id="video" autoplay playsinline></video>
+
+    <button id="captureBtn" onclick="capture()">Capture & Analyze</button>
+
+    <form id="captureForm" method="POST" action="/predict">
+        <input type="hidden" name="image" id="imageInput">
+    </form>
+
+    <canvas id="canvas" width="400" height="300"></canvas>
+</div>
+
+<script>
+    const video = document.getElementById("video");
+    const canvas = document.getElementById("canvas");
+    const imageInput = document.getElementById("imageInput");
+    const captureBtn = document.getElementById("captureBtn");
+
+    navigator.mediaDevices.getUserMedia({
+        video: {
+            width: { ideal: 640 },
+            height: { ideal: 480 },
+            facingMode: "user"
+        }
+    })
+    .then(stream => {
+        video.srcObject = stream;
+    })
+    .catch(() => {
+        alert("Webcam access denied or not available");
+    });
+
+    function capture() {
+        captureBtn.disabled = true;
+        captureBtn.innerText = "Analyzing...";
+
+        setTimeout(() => {
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            const imageData = canvas.toDataURL("image/jpeg");
+            imageInput.value = imageData;
+
+            document.getElementById("captureForm").submit();
+        }, 800);
+    }
+</script>
+
+</body>
+</html>

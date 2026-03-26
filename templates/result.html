@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Result</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 35px;
+            width: 420px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .result-box {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        .value {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .emotion {
+            color: #00ffcc;
+        }
+
+        .music {
+            color: #ffd369;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            transition: 0.3s;
+        }
+
+        a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>🎯 Analysis Result</h2>
+
+    <div class="result-box">
+        <div class="label">Detected Emotion</div>
+        <div class="value emotion">{{ emotion }}</div>
+    </div>
+
+    <div class="result-box">
+        <div class="label">Recommended Music</div>
+        <div class="value music">{{ music }}</div>
+    </div>
+
+    <a href="/">🔁 Try Again</a>
+</div>
+
+</body>
+</html>
