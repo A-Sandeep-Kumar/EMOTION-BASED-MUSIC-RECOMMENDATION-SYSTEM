@@ -46,3 +46,76 @@ CNN Emotion Classification
 Identify Emotional State
    ↓
 Recommend Suitable Music
+```
+
+
+##📂 Project Structure
+
+EMOTION-BASED-MUSIC-RECOMMENDATION-SYSTEM/
+│
+├── dataset/
+├── static/
+├── templates/
+│
+├── app.py
+├── train_model.py
+├── emotion_model.h5
+├── haarcascade_frontalface_default.xml
+└── README.md
+
+
+##🚀 Getting Started
+Prerequisites
+Python 3.x
+Webcam
+Required Python libraries
+Installation
+
+Clone the repository:
+
+git clone https://github.com/A-Sandeep-Kumar/EMOTION-BASED-MUSIC-RECOMMENDATION-SYSTEM.git
+
+Navigate to the project directory:
+
+cd EMOTION-BASED-MUSIC-RECOMMENDATION-SYSTEM
+
+Install the required dependencies:
+
+pip install -r requirements.txt
+Run the Application
+python app.py
+
+Then open the application in your browser and allow webcam access when requested.
+
+##📊 Dataset
+
+This project uses the FER-2013 (Facial Expression Recognition 2013) dataset for training the emotion classification model.
+
+The dataset is not included in this repository due to its size.
+
+##🔮 Future Improvements
+🎧 Spotify API integration for dynamic music recommendations
+📈 Improve emotion classification accuracy
+🧠 Experiment with advanced deep learning architectures
+🎵 Personalized recommendations based on listening history
+☁️ Deploy the application for online access
+💡 What I Learned
+
+Through this project, I gained practical experience in:
+
+Computer vision
+Facial expression recognition
+CNN-based image classification
+OpenCV
+Model training and inference
+Integrating an AI model into an application
+Building an end-to-end AI project
+
+##👨‍💻 Author
+
+Adirala Sandeep Kumar
+
+[Linkedin](https://www.linkedin.com/in/sandeep-kumar-aiml)
+
+
+
