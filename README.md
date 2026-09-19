@@ -51,6 +51,7 @@ Recommend Suitable Music
 
 ## 📂 Project Structure
 
+```text
 EMOTION-BASED-MUSIC-RECOMMENDATION-SYSTEM/
 │
 ├── dataset/
@@ -62,55 +63,58 @@ EMOTION-BASED-MUSIC-RECOMMENDATION-SYSTEM/
 ├── emotion_model.h5
 ├── haarcascade_frontalface_default.xml
 └── README.md
-
+```
 
 ## 🚀 Getting Started
 
-Prerequisites
-Python 3.x
-Webcam
-Required Python libraries
-Installation
+**Prerequisites**
+   - Python 3.x
+   - Webcam
+   - Required Python libraries
 
-Clone the repository:
+## Installation
+
+**Clone the repository:**
 
 git clone https://github.com/A-Sandeep-Kumar/EMOTION-BASED-MUSIC-RECOMMENDATION-SYSTEM.git
 
-Navigate to the project directory:
+**Navigate to the project directory:**
 
 cd EMOTION-BASED-MUSIC-RECOMMENDATION-SYSTEM
 
-Install the required dependencies:
+**Install the required dependencies:**
 
 pip install -r requirements.txt
-Run the Application
+
+**Run the Application**
 python app.py
 
 Then open the application in your browser and allow webcam access when requested.
 
 ## 📊 Dataset
 
-This project uses the FER-2013 (Facial Expression Recognition 2013) dataset for training the emotion classification model.
+- This project uses the FER-2013 (Facial Expression Recognition 2013) dataset for training the emotion classification model.
 
-The dataset is not included in this repository due to its size.
+- The dataset is not included in this repository due to its size.
 
 ## 🔮 Future Improvements
-🎧 Spotify API integration for dynamic music recommendations
-📈 Improve emotion classification accuracy
-🧠 Experiment with advanced deep learning architectures
-🎵 Personalized recommendations based on listening history
-☁️ Deploy the application for online access
-💡 What I Learned
+- 🎧 Spotify API integration for dynamic music recommendations
+- 📈 Improve emotion classification accuracy
+- 🧠 Experiment with advanced deep learning architectures
+- 🎵 Personalized recommendations based on listening history
+- ☁️ Deploy the application for online access
 
-## Through this project, I gained practical experience in:
+## 💡 What I Learned
 
-Computer vision
-Facial expression recognition
-CNN-based image classification
-OpenCV
-Model training and inference
-Integrating an AI model into an application
-Building an end-to-end AI project
+**Through this project, I gained practical experience in:**
+
+- Computer vision
+- Facial expression recognition
+- CNN-based image classification
+- OpenCV
+- Model training and inference
+- Integrating an AI model into an application
+- Building an end-to-end AI project
 
 ## 👨‍💻 Author
 
