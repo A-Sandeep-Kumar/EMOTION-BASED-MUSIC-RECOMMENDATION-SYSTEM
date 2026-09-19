@@ -49,7 +49,7 @@ Recommend Suitable Music
 ```
 
 
-##📂 Project Structure
+## 📂 Project Structure
 
 EMOTION-BASED-MUSIC-RECOMMENDATION-SYSTEM/
 │
@@ -64,7 +64,8 @@ EMOTION-BASED-MUSIC-RECOMMENDATION-SYSTEM/
 └── README.md
 
 
-##🚀 Getting Started
+## 🚀 Getting Started
+
 Prerequisites
 Python 3.x
 Webcam
@@ -87,13 +88,13 @@ python app.py
 
 Then open the application in your browser and allow webcam access when requested.
 
-##📊 Dataset
+## 📊 Dataset
 
 This project uses the FER-2013 (Facial Expression Recognition 2013) dataset for training the emotion classification model.
 
 The dataset is not included in this repository due to its size.
 
-##🔮 Future Improvements
+## 🔮 Future Improvements
 🎧 Spotify API integration for dynamic music recommendations
 📈 Improve emotion classification accuracy
 🧠 Experiment with advanced deep learning architectures
@@ -101,7 +102,7 @@ The dataset is not included in this repository due to its size.
 ☁️ Deploy the application for online access
 💡 What I Learned
 
-Through this project, I gained practical experience in:
+## Through this project, I gained practical experience in:
 
 Computer vision
 Facial expression recognition
@@ -111,7 +112,7 @@ Model training and inference
 Integrating an AI model into an application
 Building an end-to-end AI project
 
-##👨‍💻 Author
+## 👨‍💻 Author
 
 Adirala Sandeep Kumar
 
